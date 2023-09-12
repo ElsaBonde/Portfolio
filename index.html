@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Portfolio | Elsa Bonde</title>
+        <link rel="stylesheet" href="src/styles.css">
+        <!--lägger till poppins fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <!--Homepage-->
+        <section class="frontpage">
+            <!--Navbar med logo och meny-->
+            <nav>
+                <img class="logo" src="src/images/logo.png" alt="Elsa Bonde's logo">
+                <ul>
+                    <!--Idtaggar för att scrolla ner till rätt ställe i portfolion när man trycker på länkarna i navbar-->
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!--Innehåll första sidan-->
+            <div class="frontpage-area">
+                <div class="frontpage-text">
+                    <h1>Hi, my name is <span class="fullname">Elsa Bonde</span></h1>
+                    <p>I am an aspiring frontend developer specializing in HTML, CSS and Javascript. I am currently studying at Medieinstitutet, located in Gothenburg City. If you want to learn more about me, press the button below.</p>
+                    <!--Egen klas för egengjord knapp på frontpage-->
+                    <div class="button"><a href="#about-me">About me</a></div>
+                </div>
+                <!--Socialmedia logotyper med länkar som leder till min li, gh och fb-->
+                <div class="socialmedia">
+                    <div><a href="https://www.linkedin.com/in/elsa-bonde/" target="_blank" class="social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a></div>
+                    <div><a href="https://github.com/ElsaBonde" target="_blank" class="social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a></div>
+                    <div><a href="https://www.facebook.com/elsasofiabonde/" target="_blank" class="social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
+                    </a></div>
+                </div>
+            </div>
+        </section>
+
+        <!--About me section-->
+        <section class="subsection" id="about-me">
+            <div class="information">
+                <h2>About Me</h2>
+                <p>Hello. My name is Elsa Bonde. As of right now I am studying to become a Frontend Developer at Medieinstitutet in Gothenburg. I have previously worked in logistics until I decided to follow my passion for problem solving and design which led me to start studying frontend development. </p>
+                &nbsp;
+                <p> When I'm not at the computer, I'm usally hanging out with my friends and family, reading a crime novel or catching up on tv series. Oh, I also love traveling!</p>
+            </div>
+            <div class="imgelsa-container">
+                <img class="elsa-img" src="src/images/elsa.jpg" alt="Elsa Bonde picture">
+            </div>
+        </section>
+        <!--Projects section-->
+        <section class="subsection-projects" id="projects">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
+                    <h3>Project: CV</h3>
+                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p>
+                    <hr>
+                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
+                </div>
+                <div class="project-card">
+                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
+                    <h3>Project: CV</h3>
+                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p>
+                    <hr>
+                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
+                </div>
+                <div class="project-card">
+                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
+                    <h3>Project: CV</h3>
+                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p>
+                    <hr>
+                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
+                </div>
+                <div class="project-card">
+                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
+                    <h3>Project: CV</h3>
+                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p>
+                    <hr>
+                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="subsection-grid" id="contact">
+            <div class="contact">
+                <h2>Let's connect</h2>
+                <h3>Feel free to reach out if you're interested in working together, want to get to know me better or discussing great crime novels</h3>
+                <form id="form" action="http://localhost/wordpress/tack/" method="post" name="form">
+                   <p><label for="fnamn">First name:</label><br/>
+                   <input id="fnamn" name="fnamn" type="text" placeholder="Your first name" /></p>
+                   <p><label for="enamn">Surname:</label><br />
+                   <input id="enamn" name="enamn" type="text" placeholder="Your surname" /></p>
+                   <p><label for="epost">Email address:</label><br/>
+                   <input id="epost" name="epost" pattern=".+@.+\..+" required="" type="text" placeholder="Your email address" />
+                   <p><label for="meddelande">Message:</label><br/>
+                    <textarea id="meddelande" cols="50" name="meddelande" required="" rows="8" placeholder="Write your message here"></textarea></p>
+                    <p><input id="skicka" class="button-form" name="skicka" type="submit" value="Skicka" />
+                </form>
+            </div>
+            <div class="socialmedia-contact">
+            <div class="vertical-line">
+                <h2>Find me on social media</h2>
+                <div class="social-item-contact"><a href="https://www.linkedin.com/in/elsa-bonde/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" width="60" height="60" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a></div>
+                <div class="social-item-contact"><a href="https://github.com/ElsaBonde" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" width="60" height="60" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a></div>
+                <div class="social-item-contact"><a href="https://www.facebook.com/elsasofiabonde/" target="_blank"">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" width="60" height="60" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
+                </a></div>
+            </div>
+            </div>
+        </section>
+        <footer>
+        </footer>
+        
+        <script src="src/app.js"></script>
+    </body>
+</html>
