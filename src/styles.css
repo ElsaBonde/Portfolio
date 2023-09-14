@@ -1,83 +1,28 @@
+/*visas inte i stor skärm*/
+.contact-social-media-md-sc {
+    display: none;
+}
+
+* {
+    margin: 0;
+}
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: white;
+    margin: 0px;
 }
 
 section {
     background-color: black;
 }
 
+/*css för "home"page*/
 .frontpage {
-    background-color: black;
-    height: 100vh;
+    height: 100vh; /*frontpage visas över hela skärmstorleken*/
     color: white;
     font-size: 40px;
-}
-
-.frontpage p {
-    font-size: 35px;
-}
-
-.fullname {
-    color: orange;
-}
-
-footer {
-    height: 200px;
-    background-color: black;
-}
-
-nav {
-    display: flex; /*flexbox*/
-    justify-content: space-between; /*lägger flexboxarna på varsin sida av skärmen*/
-}
-
-ul {
-    display: flex; /*flexbox*/
-    list-style-type: none; /*tar bort punktmarkering*/
-    width: 500px;
-    justify-content: space-around;
-    font-size: 30px;
-}
-
-li {
-    text-decoration: none; /*tar bort underline på länkarna*/
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    color: #39FF14;
-}
-
-a:active {
-    color: #808080;
-}
-
-h1 {
-    font-size: 70px;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-h2 {
-    font-size: 35px;
-}
-
-p {
-    margin: 0;
-    font-size: 27px;
-    font-weight: 300;
-}
-
-.subtext {
-    font-size: 15px;
-    font-weight: 300;
-    padding: 10px;
 }
 
 .frontpage-area {
@@ -89,8 +34,89 @@ p {
 
 .frontpage-text {
     margin-left: 80px;
-    margin-bottom: 200px;
     width: 45%;
+}
+
+.frontpage p {
+    font-size: 35px;
+}
+
+.fullname {
+    color: orange;
+}
+
+/*sociala medier ikonernas stilregler*/
+.social-item {
+    margin: 20px;
+}
+.social-item-img {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+/*stilregler för navmenyn högst upp på sidan*/
+.logo {
+    height: 6vh;
+    margin: 15px;
+}
+
+nav {
+    display: flex; /*flexbox*/
+    justify-content: space-between; /*lägger flexboxarna på varsin sida av skärmen*/
+    position: fixed; /*ger navbar en fixerad position*/
+    top: 0; /*positionerar navbar till högst upp på sidan*/
+    width: 100%; /*har kvar 100% av bredden */
+    background-color: black;
+}
+
+ul {
+    display: flex; /*flexbox*/
+    list-style-type: none; /*tar bort punktmarkering*/
+    width: 500px;
+    justify-content: space-around; /*ger mellanrum mellan länkarna*/
+    font-size: 30px;
+    margin: 1em 0em 1em 0em; /*ger "default" margin för ul*/
+}
+
+/*stylesheet för för länkar ska bete sig om dom inte tillhör en speciell a class*/
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #39FF14; /*blir denna färg på texten när man hovrar på länkar*/
+}
+
+a:active {
+    color: #808080; /*blir denn färg på texten när man trycker ner den, dvs den är aktiv*/
+}
+
+/*css för footer*/
+footer {
+    background-color: black;
+    color: white;
+    padding: 1vh; /*padding tar upp 1% av skärmen åt varje håll (höger, vänster, upp och ner). Är skärmen 400px tar den alltså upp 4px åt varje håll*/
+}
+
+footer p {
+    font-size: 1rem; /*textstorleken förändras beroende på skärmstorlek då rem är en relativ enhet till skillnad från px som är absolut*/
+}
+
+/*normalstil för olika typer av textelement såsom h1, h2 och p*/
+h1 {
+    font-size: 70px;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 27px;
+    font-weight: 300;
 }
 
 /*egen knapp klass som är egendesignad istället för att använda mig av button*/
@@ -107,90 +133,78 @@ p {
 }
 
 .button:hover {
- 
-    background-color: #26ff009a;
+    background-color: #26ff009a; /*färgen på knappen ändras till denna när man hovrar över knappen*/
 }
 
 .button a {
-    color: black;
+    color: black; /*textfärg på knappen*/
 }
 
 .button a:hover {
-    color: white;
+    color: white; /*textfärg på knapp när man hovrar över den*/
 }
 
 .button:active {
     background-color: #a9a9;
-    color: #808080;
+    color: #808080; /*både text och bakgrundsfärg ändras när man trycker på knappen*/
 }
 
-/*ger padding på 200px från nedre kant i min socialmedia klass*/
-.socialmedia {
-    padding-bottom: 200px;
-}
-/*margin på 20px så att mina ikoner för olika sociala medier ej hamnar på varandra*/
-.social-item {
-    margin: 20px;
-}
-
-.logo {
-    height: 6vh;
-    margin: 15px;
-}
-
+/*styling för about me*/
 .subsection {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /*gör till flexbox då jag vill ha en bild på höger sida och text på vänster, iaf på stor skärm*/
+    justify-content: space-around; /*ger mellanrum mellan items, i detta fall bild och text*/
     padding: 80px;
-    background-color: white;
+    background-color: white; /*byter bakgrund och färg text till tvärtom från frontpage i denna sectionen - vit bakgrund,svart textfärg*/
     color: black;
 }
 
-.subsection-projects {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 80px;
-}
-
 .information {
-    padding-right: 25%;
-}
-
-.imgelsa-container {
-    display: flex;
-    align-items: center;
+    padding-right: 25%; /*ger padding mellan bild och texten*/
 }
 
 .elsa-img {
-    width: 300px;
-    border-radius: 150px;
+    width: 300px; /*ger bilden en storlek på 300 px*/
+    border-radius: 150px; /*radius på hälften av pixlarna bilden är vilket gör bilden helt och hållet rund*/
 }
 
+
+/*css för projektsidan*/
 .project-container {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /*flexbox används i projekt*/
+    justify-content: space-around; /*ger luft emellan de olika projekten som ligger i containern*/
+}
+
+.subsection-projects {
+    text-align: center; /*texten ska vara i mitten av av sin div i projekt-klassen*/
+    padding: 80px;
+    color: white;
 }
 
 .project-card {
     width: 300px;
     height: 500px;
-    box-shadow: 3px 3px 12px rgb(218, 154, 36);
+    box-shadow: 3px 3px 12px rgb(218, 154, 36); /*ger orange skugga till projektkorten*/
     margin: 10px;
+}
+
+.subtext { /*vill ha texten i mina projektkort lite mindre än normala p är*/
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px;
 }
 
 .project-img {
     margin-top: 25px;
-    width: 250px;
-    border-radius: 125px;
+    width: 250px; 
+    border-radius: 125px; /*gör bilden rund genom att ta border-radius på hälften av bildens bredd*/
 }
 
-hr {
-    margin-left: 20px;
+hr { /*strecken i projektkorten ska sluta 20px innan "bryt"*/
+    margin-left: 20px; 
     margin-right: 20px;
 }
 
-/*stylar länken i projekt korten*/
+/*stylar länken i projekt korten, neongrön by default, dovare grön när man hovrar och grå när man klickar på den*/
 .project-link {
     color: #39FF14;
     text-decoration: none;
@@ -205,40 +219,43 @@ hr {
 }
 
 /*css för kontaktformulär*/
-/*grid för contact*/
 .subsection-grid {
     padding: 80px;
     background-color: white;
     color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: grid; /*grid för contact*/
+    grid-template-columns: repeat(6, 1fr); /*skapar 6 lika stora kolumner*/
+    grid-template-rows: repeat(3, 1fr); /*skapar 3 lika stora rader*/
 }
 
 .contact {
-    grid-column: 1 / 4;
-    width: 80%;
-    grid-row: 1 / 3;
+    grid-column: 1 / 4; /*kontaktformuläret är på kolumn 1-4 i grid vilket då ger den 2/3 av grid*/
+    width: 80%; 
+    grid-row: 1 / 4; /*använder rad 1-4, dvs alla*/
 }
 
 /*skapar en vertikal orange linje i mitten av min grid i kontakt för att dela upp den i två delar*/
 .vertical-line {
-    border-left: 6px solid orange;
-    height: 100%;
+    border-left: 6px solid orange; /*gör ett streck på vänster sida som är 6 pixlar och orange, detta ger ett intryck av att det är två "boxar"*/
+    height: 100%; /*tar upp 100% av sin box utifrån reglerna som redan är bestämda*/
 }
+
 .vertical-line h2 {
-    padding-left: 80px;
+    padding-left: 80px; /*flyttar texten i klassen 80px FRÅN vänster sida och den orangea linjen*/
+    padding-bottom: 10vh; 
 }
 
 .socialmedia-contact {
-    grid-column: 4 / 7;
-    grid-row: 1 / 3;
-
+    grid-column: 4 / 7; /*använder kolumn 4-7, dvs resterade innehåll*/
+    grid-row: 1 / 4; /*använder alla rader*/
 }
 
 .social-item-contact {
-    padding-left: 80px;
-    padding-bottom: 50px;
+    padding-left: 80px; /*flyttar texten i klassen 80px FRÅN vänster sida och den orangea linjen*/
+    padding-bottom: 50px; /*ger en padding från botten på 50px*/
+    fill: black;
+    width: 60px;
+    height: 60px;
 }
 
 fieldset p {
@@ -251,3 +268,246 @@ label {
 }
 
 
+
+/*MQ för maxbredd som min laptopskärm på 1536px. Vad som ändras här är egentligen främst textstorlek + storlek på logo samt texten på homepage*/
+@media only screen and (max-width:1536px) {
+    p {
+        font-size: 23px;
+    }
+    h2 {
+        font-size: 33px;
+    }
+
+    /*home-page för stor laptop*/
+    .logo {
+        height: 75px;
+    }
+
+    ul {
+        width: 400px;
+        font-size: 25px;
+    }
+
+    .frontpage-text {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .frontpage p {
+        font-size: 23px;
+    }
+
+    /*gör knappen lite mindre på frontpage i både storlek och textstorlek*/
+    .button {
+        width: 120px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .social-item-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /*om mig max 1536px*/
+    .information {
+        padding-right: 10%;
+    }
+
+    /*på kontakt-sida max 1536px ges kontakt mer utrymme än sociala medier på contact id:t*/
+    .contact {
+        grid-column: 1 / 6;
+    }
+    .socialmedia-contact {
+        grid-column: 5 / 7;
+    }
+}
+
+
+/*MQ för dator maxbredd 1024px*/
+@media only screen and (max-width:1024px) {
+    p {
+        font-size: 21px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    /*home-page för laptop*/
+    .logo {
+        height: 65px;
+    }
+
+    ul {
+        width: 400px;
+        font-size: 25px;
+    }
+
+    .frontpage-text {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .frontpage p {
+        font-size: 20px;
+    }
+
+    .button {
+        width: 120px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    /*om mig max 1024px*/
+    .information {
+        padding-right: 0%;
+    }
+
+    .imgelsa-container {
+        display: none; /*tar bort bilden på mig i about sidan när skärmen är mindre*/
+    }
+
+    /*projekt-sida max 1024px*/
+    .project-container {
+        display: flex;
+        flex-wrap: wrap; /*lägger projekten på varandra istället för bredvid*/
+        gap: 80px 0px; /*skapar ett tomrum vertikalt mellan projektkorten*/
+    }
+
+    /*kontakt-sida max 1024px*/
+    .contact {
+        grid-column: 1 / 6; /*tar upp alla kolumner i griden förutom sista*/
+    }
+    .socialmedia-contact {
+        grid-column: 6 / 7; /*får sista kolumnen i griden*/
+    }
+
+    .social-icons-contact {
+        padding-top: 100% /*placerar sociala medier ikonerna i mitten av section*/
+    }
+    
+    .contact-social-media-bg-sc {
+        display: none; /*visa inte sociala medier texten utan bara ikonerna när skärmen är mindre*/
+    }
+}
+
+/*MQ för dator maxbredd mobil 576px*/
+@media only screen and (max-width:576px) {
+    .socialmedia {
+        display: none; /*tar bort sociala medier ikonerna på frontpage i mobiltelefon*/
+    }
+
+    /*skapar grid på frontpage*/
+    .frontpage {
+        display: grid;
+        grid-template-rows: 1fr 10fr; /*en rad tar upp 9,09 av utrymmet och den andra raden tar upp 90,9*/
+    }
+
+    nav {
+        grid-row: 1; /*navbar får det lilla utrymmet (9,09 av skärmen)*/
+    }
+
+    .frontpage-area {
+        grid-row: 2; /*får den stora delen av grid*/
+        display: block; /*gör att det blir bryt innan och efter varje element*/
+        padding-top: 30%; /*skickar ner containern med text 30% från toppen*/
+    }
+
+    .frontpage-text {
+        width: 90%; /*tar upp 90% av ytan i sin box*/
+        margin: 0px; /*ingen margin här tacK*/
+        padding: 20px; 
+    }
+
+    p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 25px;
+        margin: 10px 0px 10px 0px; /*behöver lite margin för rubrikerna på varje sida*/
+    }
+
+    /*home-page för mobil*/
+    .logo {
+        height: 45px;
+    }
+
+    /*mindre meny så den inte ser så ihoptryckt ut*/ /*OBS OBS hoppas kunna fixa snyggare med js i framtiden*/
+    ul { 
+        width: 420px;
+        font-size: 20px;
+        padding-left: 0px;
+    }
+
+    .frontpage-text {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .frontpage p {
+        font-size: 18px;
+    }
+
+    /*mindre knapp på frontpage*/
+    .button {
+        width: 120px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    /*om mig mobil*/
+    .subsection {
+        padding: 20px;
+    }
+    .information {
+        padding-right: 0%;
+    }
+
+    /*projekt-sida mobil*/
+    .subsection-projects { 
+        padding: 0px 0px 40px 0px;
+    }
+        
+
+    /*kontakt-sida mobil*/
+    .subsection-grid {
+        display: block;
+        padding: 20px;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .socialmedia-contact {
+        display: none;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    textarea {
+        width: 95%;
+        margin-top: 5px;
+    }
+
+    input {
+        margin: 5px 0px 8px 0px;
+    }
+}
