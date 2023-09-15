@@ -15,7 +15,7 @@ body {
 }
 
 section {
-    background-color: black;
+    background: black;
 }
 
 /*css för "home"page*/
@@ -112,6 +112,7 @@ h1 {
 
 h2 {
     font-size: 35px;
+    padding-bottom: 20px;
 }
 
 p {
@@ -202,6 +203,8 @@ p {
 hr { /*strecken i projektkorten ska sluta 20px innan "bryt"*/
     margin-left: 20px; 
     margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*stylar länken i projekt korten, neongrön by default, dovare grön när man hovrar och grå när man klickar på den*/
@@ -474,7 +477,7 @@ label {
 
     /*projekt-sida mobil*/
     .subsection-projects { 
-        padding: 0px 0px 40px 0px;
+        padding: 20px 0px 40px 0px;
     }
         
 
@@ -491,7 +494,7 @@ label {
     }
 
     .contact {
-        width: 100%;
+    width: 100%;
     }
 
     .socialmedia-contact {
