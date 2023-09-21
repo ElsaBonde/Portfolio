@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--läser av bredden på webbläsarens fönster-->
@@ -18,7 +18,9 @@
         <section class="frontpage">
             <!--Navbar med logo och meny-->
             <nav>
-                <img class="logo" src="src/images/logo.png" alt="Elsa Bonde's logo">
+                <a href="index.html">
+                    <img class="logo" src="src/images/logo.png" alt="Elsa Bonde's logo">
+                </a>
                 <ul>
                     <!--Idtaggar för att scrolla ner till rätt ställe i portfolion när man trycker på länkarna i navbar-->
                     <li><a href="#about-me">About</a></li>
@@ -29,7 +31,7 @@
             <!--Innehåll första sidan-->
             <div class="frontpage-area">
                 <div class="frontpage-text">
-                    <!--span gör att mitt för och efternamn får ligga kvar på samma rad trots att det har andra css-attribut-->
+                    <!--Span gör att mitt för och efternamn får ligga kvar på samma rad trots att det har andra css-attribut-->
                     <h1>Hi, my name is <span class="fullname">Elsa Bonde</span></h1>
                     <p>I am an aspiring frontend developer specializing in HTML, CSS and Javascript. I am currently studying at Medieinstitutet, located in Gothenburg City. If you want to learn more about me, press the button below.</p>
                     <!--Egen klass för egengjord knapp på frontpage-->
@@ -67,12 +69,13 @@
             <h2>Projects</h2>
             <!--container innehållande fyra olika "kort" som bär på ett projekt var, se vad de olika sakerna betyder på första kortet-->
             <div class="project-container">
+
                 <div class="project-card">
-                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV"> <!--bild på projektet-->
-                    <h3>Project: CV</h3> <!--titel på projektet-->
-                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p> <!--beskrivande text om projektet-->
+                    <img class="project-img" src="src/images/portfolio-project.png" alt="Project: CV"> <!--bild på projektet-->
+                    <h3>Project: Portfolio</h3> <!--titel på projektet-->
+                    <p class="subtext">I made this portfolio using HTML and CSS and some Javascript. </p> <!--beskrivande text om projektet-->
                     <hr> <!--en rak linje-->
-                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p> <!--länk till projektet på github-->
+                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Portfolio">View here</a></p> <!--länk till projektet på github-->
                 </div>
                 <div class="project-card">
                     <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
@@ -81,20 +84,25 @@
                     <hr>
                     <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
                 </div>
-                <div class="project-card">
-                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
-                    <h3>Project: CV</h3>
-                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
+                <div class="upcoming">
+                    <div class="project-card">
+                        <img class="project-img" src="src/images/coming-soon-project.jpg" alt="Coming soon">
+                        <h3>Upcoming project</h3>
+                        <p class="subtext">Upcoming project coming soon. Stay tuned!</p>
+                        <hr>
+                        <p class="subtext">View here</p>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img class="project-img" src="src/images/cv-project.png" alt="Project: CV">
-                    <h3>Project: CV</h3>
-                    <p class="subtext">I created a CV made as a timeline using HTML and CSS.</p>
-                    <hr>
-                    <p class="subtext"><a class="project-link" href="https://github.com/ElsaBonde/Cv_timeline.git">View here</a></p>
+                <div class="upcoming">
+                    <div class="project-card">
+                        <img class="project-img" src="src/images/coming-soon-project.jpg" alt="Coming soon">
+                        <h3>Upcoming project</h3>
+                        <p class="subtext">Upcoming project coming soon. Stay tuned!</p>
+                        <hr>
+                        <p class="subtext">View here</p>
+                    </div>
                 </div>
+
             </div>
         </section>
         <!--ny subsection klass för kontakta mig delen av webbsidan som görs i css grid-->
@@ -103,11 +111,11 @@
                 <h2>Let's connect</h2>
                 <h3>Feel free to reach out if you're interested in working together, want to get to know me better or discussing great crime novels</h3>
                 <!--ett kontaktformulär utan fungerande action-->
-                <form id="form" action="http://localhost/wordpress/tack/" method="post" name="form">
+                <form id="form" action="http://localhost/wordpress/tack/" method="post" autocomplete="on" name="form">
                    <p><label for="fnamn">First name:</label><br>
-                   <input id="fnamn" name="fnamn" type="text" placeholder="Your first name"></p>
+                   <input id="fnamn" name="fnamn" required="" type="text" placeholder="Your first name"></p>
                    <p><label for="enamn">Surname:</label><br>
-                   <input id="enamn" name="enamn" type="text" placeholder="Your surname"></p>
+                   <input id="enamn" name="enamn" required="" type="text" placeholder="Your surname"></p>
                    <p><label for="epost">Email address:</label><br>
                     <!--email är bara godkänd om den har ett godkänt mönster dvs @ etc..-->
                    <input id="epost" name="epost" pattern=".+@.+\..+" required="" type="text" placeholder="Your email address">
@@ -122,15 +130,28 @@
                     <!--&#9996 blir till ett victorytecken-->
                     <h2 class="contact-social-media-bg-sc">My Social Media &#9996;</h2>
                     <div class="social-icons-contact">
-                        <div class="social-item-contact"><a href="https://www.linkedin.com/in/elsa-bonde/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a></div>
-                        <div class="social-item-contact"><a href="https://github.com/ElsaBonde" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </a></div>
-                        <div class="social-item-contact"><a href="https://www.facebook.com/elsasofiabonde/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
-                        </a></div>
+                        <div class="social-icons-1">
+                            <div class="social-item-contact"><a href="https://www.linkedin.com/in/elsa-bonde/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a></div>
+                            <div class="social-item-contact"><a href="https://github.com/ElsaBonde" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a></div>
+                            <div class="social-item-contact"><a href="https://www.facebook.com/elsasofiabonde/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
+                            </a></div>
+                        </div>
+                        <div class="social-icons-2">
+                            <div class="social-item-contact"><a href="https://www.instagram.com/elzabonde/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.233 5.488c-.843-.038-1.097-.046-3.233-.046s-2.389.008-3.232.046c-2.17.099-3.181 1.127-3.279 3.279-.039.844-.048 1.097-.048 3.233s.009 2.389.047 3.233c.099 2.148 1.106 3.18 3.279 3.279.843.038 1.097.047 3.233.047 2.137 0 2.39-.008 3.233-.046 2.17-.099 3.18-1.129 3.279-3.279.038-.844.046-1.097.046-3.233s-.008-2.389-.046-3.232c-.099-2.153-1.111-3.182-3.279-3.281zm-3.233 10.62c-2.269 0-4.108-1.839-4.108-4.108 0-2.269 1.84-4.108 4.108-4.108s4.108 1.839 4.108 4.108c0 2.269-1.839 4.108-4.108 4.108zm4.271-7.418c-.53 0-.96-.43-.96-.96s.43-.96.96-.96.96.43.96.96-.43.96-.96.96zm-1.604 3.31c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zm4.333-12h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.952 15.298c-.132 2.909-1.751 4.521-4.653 4.654-.854.039-1.126.048-3.299.048s-2.444-.009-3.298-.048c-2.908-.133-4.52-1.748-4.654-4.654-.039-.853-.048-1.125-.048-3.298 0-2.172.009-2.445.048-3.298.134-2.908 1.748-4.521 4.654-4.653.854-.04 1.125-.049 3.298-.049s2.445.009 3.299.048c2.908.133 4.523 1.751 4.653 4.653.039.854.048 1.127.048 3.299 0 2.173-.009 2.445-.048 3.298z"/></svg>
+                            </a></div>
+                            <div class="social-item-contact"><a href="https://open.spotify.com/user/elzabonde?si=bf2c52f9fd8c4f76" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-12-7c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm3.21 10.096c-.125.207-.394.271-.6.146-1.643-1.005-3.712-1.232-6.149-.675-.235.053-.469-.094-.522-.328-.054-.235.092-.469.328-.523 2.666-.609 4.954-.347 6.799.78.205.126.27.395.144.6zm.857-1.906c-.158.257-.494.338-.751.18-1.881-1.156-4.75-1.491-6.975-.816-.289.088-.594-.075-.681-.363-.087-.289.076-.593.364-.681 2.542-.771 5.703-.398 7.863.93.257.158.338.494.18.75zm.074-1.984c-2.257-1.34-5.979-1.464-8.133-.81-.345.105-.711-.09-.816-.436-.105-.346.09-.712.436-.817 2.473-.75 6.583-.605 9.181.937.311.184.413.586.229.897-.185.311-.587.413-.897.229z"/></svg>
+                            </a></div>
+                            <div class="social-item-contact"><a href="mailto: elsasofiabonde@gmail.com" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 24h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5v14c0 2.761-2.238 5-5 5zm-.141-6.333c.63 0 1.141-.512 1.141-1.142v-9.05c0-.63-.511-1.142-1.141-1.142h-13.718c-.63 0-1.141.512-1.141 1.142v9.05c0 .63.511 1.142 1.141 1.142h13.718zm-6.859-4.058l-6.228-4.321-.014 7.712h12.457v-7.712l-6.215 4.321zm5.913-6.609c-1.745 1.215-5.913 4.153-5.913 4.153l-5.947-4.153h11.86z"/></svg>
+                            </a></div>
+                        </div>
                     </div>
                 </div>
             </div>

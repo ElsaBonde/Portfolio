@@ -1,13 +1,10 @@
-/*visas inte i stor skärm*/
-.contact-social-media-md-sc {
-    display: none;
-}
+html { /*gör att menyn inte lägger sig över tex. section när man klickat på en id-länk i menyn*/
+    scroll-padding-top: 100px;
+ }
 
 * {
     margin: 0;
 }
-
-
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -15,7 +12,7 @@ body {
 }
 
 section {
-    background: black;
+    background: black; /*default bakgrundsfärg för section är nu svart*/
 }
 
 /*css för "home"page*/
@@ -23,6 +20,11 @@ section {
     height: 100vh; /*frontpage visas över hela skärmstorleken*/
     color: white;
     font-size: 40px;
+    background-image: url("/src/images/dator_hand.jpg");
+    background-attachment: fixed; /*gör att bakgrunden blir parallax*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-size: contain;*/
 }
 
 .frontpage-area {
@@ -32,9 +34,21 @@ section {
     align-items: center;
 }
 
+
+
+/*elsa kika på detta*/
 .frontpage-text {
     margin-left: 80px;
     width: 45%;
+    position: relative;
+    transform: translateX(-200%); /*texten på framsidan startsar utanför skärmvyn*/
+    animation: slideRight 2s ease forwards; /*efter två sekunder kommer texten in på skärmen med hjälp av keyframen nedan*/
+}
+
+@keyframes slideRight {
+    100% {
+        transform: translateX(0%); /*texten kommer genom drenna lilla kodsnutt in till sin rätte plats*/
+    }    
 }
 
 .frontpage p {
@@ -55,10 +69,18 @@ section {
     fill: white;
 }
 
+.social-item-img:hover {
+    fill: orange; /*ändrar färgen på ikonerna till orange likt namnet "elsa bonde" på framsidan då man hovrar över dom*/
+}
+
 /*stilregler för navmenyn högst upp på sidan*/
 .logo {
     height: 6vh;
-    margin: 15px;
+    margin: 15px 15px 0px 15px;
+}
+
+.logo a:hover {
+    transition: none;
 }
 
 nav {
@@ -68,6 +90,7 @@ nav {
     top: 0; /*positionerar navbar till högst upp på sidan*/
     width: 100%; /*har kvar 100% av bredden */
     background-color: black;
+    z-index: 100; /*gör att menyun ligger framför allt annat material*/
 }
 
 ul {
@@ -83,10 +106,12 @@ ul {
 a {
     text-decoration: none;
     color: white;
+    transition: 0.25s; /*gör att det tar 250ms för texten att bli större när man hovrar över länk*/
 }
 
 a:hover {
     color: #39FF14; /*blir denna färg på texten när man hovrar på länkar*/
+    font-size: 27px; /*texten blir större i menyn när man hovrar över den*/
 }
 
 a:active {
@@ -108,6 +133,7 @@ footer p {
 h1 {
     font-size: 70px;
     padding-bottom: 5px;
+    text-shadow: 2px 2px 1px rgb(81, 81, 81);
 }
 
 h2 {
@@ -143,6 +169,7 @@ p {
 
 .button a:hover {
     color: white; /*textfärg på knapp när man hovrar över den*/
+    font-size: inherit; /*gör att texten får samma storlek som sitt föräldrar element och inte beter sig som länkarna i menyn (blir större vid hover)*/
 }
 
 .button:active {
@@ -179,13 +206,19 @@ p {
     text-align: center; /*texten ska vara i mitten av av sin div i projekt-klassen*/
     padding: 80px;
     color: white;
+    background-image: url("/src/images/projects.jpg");
+    background-attachment: fixed; /*gör att bakgrunden blir parallax*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .project-card {
     width: 300px;
     height: 500px;
-    box-shadow: 3px 3px 12px rgb(218, 154, 36); /*ger orange skugga till projektkorten*/
+    box-shadow: 1px 1px 8px rgb(218, 154, 36); /*ger orange skugga till projektkorten*/
     margin: 10px;
+    background-color: black;
 }
 
 .subtext { /*vill ha texten i mina projektkort lite mindre än normala p är*/
@@ -200,6 +233,18 @@ p {
     border-radius: 125px; /*gör bilden rund genom att ta border-radius på hälften av bildens bredd*/
 }
 
+.upcoming {
+    color: grey;
+}
+
+.upcoming .project-img {
+    opacity: 0.5;
+}
+
+.upcoming hr {
+    background-color: gray;
+}
+
 hr { /*strecken i projektkorten ska sluta 20px innan "bryt"*/
     margin-left: 20px; 
     margin-right: 20px;
@@ -211,10 +256,12 @@ hr { /*strecken i projektkorten ska sluta 20px innan "bryt"*/
 .project-link {
     color: #39FF14;
     text-decoration: none;
+    transition: 0.4s;
 }
 
 .project-link:hover {
     color: #26ff009a;
+    font-size: 18px;
 }
 
 .project-link:active {
@@ -237,6 +284,15 @@ hr { /*strecken i projektkorten ska sluta 20px innan "bryt"*/
     grid-row: 1 / 4; /*använder rad 1-4, dvs alla*/
 }
 
+input[type=text], textarea { 
+    padding: 4px 7px 4px 7px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-form {
+    padding: 4px 7px 4px 7px;
+}
+
 /*skapar en vertikal orange linje i mitten av min grid i kontakt för att dela upp den i två delar*/
 .vertical-line {
     border-left: 6px solid orange; /*gör ett streck på vänster sida som är 6 pixlar och orange, detta ger ett intryck av att det är två "boxar"*/
@@ -251,6 +307,12 @@ hr { /*strecken i projektkorten ska sluta 20px innan "bryt"*/
 .socialmedia-contact {
     grid-column: 4 / 7; /*använder kolumn 4-7, dvs resterade innehåll*/
     grid-row: 1 / 4; /*använder alla rader*/
+}
+
+.social-icons-contact {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
 }
 
 .social-item-contact {
@@ -270,6 +332,13 @@ label {
     font-weight: 400;
 }
 
+.social-icons-1 {
+    grid-column: 1;
+}
+
+.social-icons-2 {
+    grid-column: 2;
+}
 
 
 /*MQ för maxbredd som min laptopskärm på 1536px. Vad som ändras här är egentligen främst textstorlek + storlek på logo samt texten på homepage*/
@@ -283,7 +352,7 @@ label {
 
     /*home-page för stor laptop*/
     .logo {
-        height: 75px;
+        height: 65px;
     }
 
     ul {
@@ -322,7 +391,7 @@ label {
 
     /*på kontakt-sida max 1536px ges kontakt mer utrymme än sociala medier på contact id:t*/
     .contact {
-        grid-column: 1 / 6;
+        grid-column: 1 / 5;
     }
     .socialmedia-contact {
         grid-column: 5 / 7;
@@ -349,12 +418,12 @@ label {
         font-size: 25px;
     }
 
-    .frontpage-text {
-        width: 50%;
+    h1 {
+        font-size: 45px;
     }
 
-    h1 {
-        font-size: 50px;
+    .frontpage {
+        background-position: center;
     }
 
     .frontpage p {
@@ -392,12 +461,25 @@ label {
     }
 
     .social-icons-contact {
-        padding-top: 100% /*placerar sociala medier ikonerna i mitten av section*/
+        padding-top: 50% /*placerar sociala medier ikonerna i mitten av section*/
     }
     
     .contact-social-media-bg-sc {
         display: none; /*visa inte sociala medier texten utan bara ikonerna när skärmen är mindre*/
     }
+}
+
+/*småsaker för tablets*/
+@media only screen and (max-width:820px) {
+    /*gör att det får plats två projektkort bredvid varandra även i surfplattor*/
+    .subsection-projects {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .social-icons-2 {
+        display: none;
+    }
+
 }
 
 /*MQ för dator maxbredd mobil 576px*/
@@ -410,6 +492,7 @@ label {
     .frontpage {
         display: grid;
         grid-template-rows: 1fr 10fr; /*en rad tar upp 9,09 av utrymmet och den andra raden tar upp 90,9*/
+        background-image: none;
     }
 
     nav {
@@ -447,6 +530,10 @@ label {
         font-size: 20px;
         padding-left: 0px;
     }
+    
+    a:hover {
+        font-size: 22px; /*texten blir större i menyn när man hovrar över den*/
+    }
 
     .frontpage-text {
         font-size: 15px;
@@ -479,7 +566,6 @@ label {
     .subsection-projects { 
         padding: 20px 0px 40px 0px;
     }
-        
 
     /*kontakt-sida mobil*/
     .subsection-grid {
