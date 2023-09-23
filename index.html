@@ -111,7 +111,7 @@
                 <h2>Let's connect</h2>
                 <h3>Feel free to reach out if you're interested in working together, want to get to know me better or discussing great crime novels</h3>
                 <!--ett kontaktformulär utan fungerande action-->
-                <form id="form" action="http://localhost/wordpress/tack/" method="post" autocomplete="on" name="form">
+                <form id="form" autocomplete="on" name="form">
                    <p><label for="fnamn">First name:</label><br>
                    <input id="fnamn" name="fnamn" required="" type="text" placeholder="Your first name"></p>
                    <p><label for="enamn">Surname:</label><br>
@@ -122,7 +122,7 @@
                    <p><label for="meddelande">Message:</label><br>
                     <!--i meddelande rutan får det max plats 50 tecken i bredd och 8 rader totalt.-->
                     <textarea id="meddelande" cols="50" name="meddelande" required="" rows="8" placeholder="Write your message here"></textarea></p>
-                    <p><input id="skicka" class="button-form" name="skicka" type="submit" value="Skicka">
+                    <p><input onclick="myFuntion()" id="skicka" class="button-form" name="skicka" type="submit" value="Skicka">
                 </form>
             </div>
             <div class="socialmedia-contact">
